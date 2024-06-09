@@ -48,7 +48,7 @@ export default function Table() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen p-16 items-center">
+    <div className="flex flex-col min-h-screen p-4 md:p-16 items-center">
       <div className="w-full relative overflow-x-auto shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <caption className="p-5 text-2xl font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
@@ -118,19 +118,19 @@ export default function Table() {
                   <td className="px-6 py-4">{item.nama}</td>
                   <td className="px-6 py-4">{item.umur} Bulan</td>
                   <td className="px-6 py-4">{item.bb} kg</td>
-                  <td className="px-6 py-4">{item.pb} Cm</td>
-                  <td className="px-6 py-4">{item.imt}</td>
+                  <td className="px-6 py-4">{item.pb} cm</td>
+                  <td className="px-6 py-4">{item.imt} kg/cm²</td>
                   <td className="px-6 py-4">{item.ket}</td>
-                  <td className="px-6 py-4 flex justify-center items-center">
+                  <td className="px-6 py-4 flex-col justify-center items-center">
                     <a
                       href={`/edit-data/${item.id}`}
-                      className="font-medium text-yellow-600 dark:text-yellow-500 hover:underline me-1"
+                      className="font-medium text-yellow-600 dark:text-yellow-500 hover:underline"
                     >
                       Edit
                     </a>
                     <button
                       onClick={() => deleteData(item.id)}
-                      className="font-medium text-red-600 dark:text-red-500 hover:underline ms-1"
+                      className="font-medium text-red-600 dark:text-red-500 hover:underline"
                     >
                       Hapus
                     </button>
