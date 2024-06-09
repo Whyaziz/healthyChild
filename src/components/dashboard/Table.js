@@ -90,13 +90,10 @@ export default function Table() {
                 PB
               </th>
               <th scope="col" className="px-6 py-3">
-                BB/U
+                imt
               </th>
               <th scope="col" className="px-6 py-3">
-                PB/U
-              </th>
-              <th scope="col" className="px-6 py-3">
-                BB/PB
+                keterangan
               </th>
               <th scope="col" className="px-6 py-3">
                 Action
@@ -122,9 +119,8 @@ export default function Table() {
                   <td className="px-6 py-4">{item.umur} Bulan</td>
                   <td className="px-6 py-4">{item.bb} kg</td>
                   <td className="px-6 py-4">{item.pb}</td>
-                  <td className="px-6 py-4">{item.bbu}</td>
-                  <td className="px-6 py-4">{item.pbu}</td>
-                  <td className="px-6 py-4">{item.bbpb}</td>
+                  <td className="px-6 py-4">{item.imt}</td>
+                  <td className="px-6 py-4">{item.ket}</td>
                   <td className="px-6 py-4 flex justify-center items-center">
                     <a
                       href={`/edit-data/${item.id}`}

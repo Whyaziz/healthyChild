@@ -34,9 +34,8 @@ export default function Edit({ params }) {
       document.getElementById("umur").value = response.data.umur;
       document.getElementById("bb").value = response.data.bb;
       document.getElementById("pb").value = response.data.pb;
-      document.getElementById("bbu").value = response.data.bbu;
-      document.getElementById("pbu").value = response.data.pbu;
-      document.getElementById("bbpb").value = response.data.bbpb;
+      document.getElementById("imt").value = response.data.imt;
+      document.getElementById("ket").value = response.data.ket;
       console.log("Data fetched: ", response.data);
     } catch (error) {
       console.error("Error fetching data: ", error);
@@ -55,6 +54,8 @@ export default function Edit({ params }) {
       console.log("Data fetched: ", response.data);
       event.pb.value = Object.values(response.data)[0].pb;
       event.bb.value = Object.values(response.data)[0].bb;
+      event.imt.value = Object.values(response.data)[0].imt;
+      event.ket.value = Object.values(response.data)[0].ket;
     } catch (error) {
       console.error("Error fetching data: ", error);
     }
@@ -69,9 +70,8 @@ export default function Edit({ params }) {
     const no_rekmed = now.getTime();
     const bb = event.target.elements.bb.value;
     const pb = event.target.elements.pb.value;
-    const bbu = event.target.elements.bbu.value;
-    const pbu = event.target.elements.pbu.value;
-    const bbpb = event.target.elements.bbpb.value;
+    const imt = event.target.elements.imt.value;
+    const ket = event.target.elements.ket.value;
 
     const data = {
       tgl,
@@ -80,9 +80,8 @@ export default function Edit({ params }) {
       umur,
       bb,
       pb,
-      bbu,
-      pbu,
-      bbpb,
+      imt,
+      ket,
     };
 
     try {
@@ -201,46 +200,31 @@ export default function Edit({ params }) {
             </div>
             <div className="mb-3">
               <label
-                htmlFor="bbu"
+                htmlFor="imt"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Berat Badan / Umur
+                IMT
               </label>
               <input
                 type="text"
-                id="bbu"
+                id="imt"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="BB/U"
+                placeholder="IMT"
                 required
               />
             </div>
             <div className="mb-3">
               <label
-                htmlFor="pbu"
+                htmlFor="ket"
                 className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
               >
-                Panjang Badan / Umur
+                Keterangan
               </label>
               <input
                 type="text"
-                id="pbu"
+                id="ket"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="PB/U"
-                required
-              />
-            </div>
-            <div className="mb-3">
-              <label
-                htmlFor="bbpb"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-              >
-                Berat Badan / Panjang Badan
-              </label>
-              <input
-                type="text"
-                id="bbpb"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="BB/PB"
+                placeholder="Keterangan"
                 required
               />
             </div>
