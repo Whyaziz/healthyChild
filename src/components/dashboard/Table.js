@@ -47,6 +47,11 @@ export default function Table() {
     fetchData();
   }, []);
 
+  const formatNumber = (number) => {
+    const parsedNumber = parseFloat(number);
+    return isNaN(parsedNumber) ? number : parsedNumber.toFixed(2);
+  };
+
   return (
     <div className="flex flex-col min-h-screen p-4 md:p-16 items-center">
       <div className="w-full relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -117,9 +122,9 @@ export default function Table() {
                   <td className="px-6 py-4">{item.no_rekmed}</td>
                   <td className="px-6 py-4">{item.nama}</td>
                   <td className="px-6 py-4">{item.umur} Bulan</td>
-                  <td className="px-6 py-4">{item.bb} kg</td>
-                  <td className="px-6 py-4">{item.pb} cm</td>
-                  <td className="px-6 py-4">{item.imt} kg/m²</td>
+                  <td className="px-6 py-4">{formatNumber(item.bb)} kg</td>
+                  <td className="px-6 py-4">{formatNumber(item.pb)} cm</td>
+                  <td className="px-6 py-4">{formatNumber(item.imt)} kg/m²</td>
                   <td className="px-6 py-4">{item.ket}</td>
                   <td className="px-6 py-4 flex-col justify-center items-center">
                     <a
