@@ -119,7 +119,7 @@ export default function Table() {
                   <td className="px-6 py-4">{item.umur} Bulan</td>
                   <td className="px-6 py-4">{item.bb} kg</td>
                   <td className="px-6 py-4">{item.pb} cm</td>
-                  <td className="px-6 py-4">{item.imt} kg/cm²</td>
+                  <td className="px-6 py-4">{item.imt} kg/m²</td>
                   <td className="px-6 py-4">{item.ket}</td>
                   <td className="px-6 py-4 flex-col justify-center items-center">
                     <a
