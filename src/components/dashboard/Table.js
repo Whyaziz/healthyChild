@@ -126,7 +126,7 @@ export default function Table() {
                   <td className="px-6 py-4">{formatNumber(item.pb)} cm</td>
                   <td className="px-6 py-4">{formatNumber(item.imt)} kg/m²</td>
                   <td className="px-6 py-4">{item.ket}</td>
-                  <td className="px-6 py-4 flex-col justify-center items-center">
+                  <td className="px-6 py-4 flex flex-col justify-center items-center">
                     <a
                       href={`/edit-data/${item.id}`}
                       className="font-medium text-yellow-600 dark:text-yellow-500 hover:underline"
